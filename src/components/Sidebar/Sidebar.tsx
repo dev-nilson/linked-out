@@ -1,12 +1,21 @@
 import { Avatar } from "@mui/material";
+import Banner from "../../assets/banner.jpg";
+import "./Sidebar.css";
 
 export default function Sidebar() {
+  const recentItems = (topic: string) => (
+    <div className="recent">
+      <span className="recent__hashtag">#</span>
+      <p>{topic}</p>
+    </div>
+  )
+
   return (
     <div className="sidebar">
       <div className="sidebar__top">
-        <img src="" alt="" />
-        <Avatar />
-        <h2>Name LastTname</h2>
+        <img src={Banner} alt="profile banner" />
+        <Avatar className="sidebar__avatar" />
+        <h2>Name Lastname</h2>
         <h4>This is a description</h4>
       </div>
 
@@ -20,6 +29,14 @@ export default function Sidebar() {
           <p className="stat__number">100</p>
         </div>
       </div>
+
+      <div className="sidebar__bottom">
+        <p>Recent</p>
+        {recentItems("job")}
+        {recentItems("opportunity")}
+        {recentItems("hiring")}
+        {recentItems("recruiting")}
+      </div>
     </div>
-  )
+  );
 }
