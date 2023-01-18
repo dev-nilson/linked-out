@@ -14,7 +14,9 @@ function Navbar() {
           <input type="text" />
         </div>
       </div>
-      <div className="navar__right"></div>
+      <div className="navbar__right">
+        
+      </div>
     </nav>
   );
 }
