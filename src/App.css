@@ -6,6 +6,12 @@
   font-family: "Poppins", sans-serif;
 }
 
+.app {
+  background-color: #f3f2ef;
+  display: flex;
+  flex-direction: column;
+}
+
 .app__body {
   display: flex;
 }
