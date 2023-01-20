@@ -1,4 +1,5 @@
 import { Avatar } from "@mui/material";
+import { randomRgbColor } from "../../utils/helpers";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import ShareIcon from "@mui/icons-material/Share";
@@ -14,10 +15,18 @@ type PostProps = {
 };
 
 function Post({ id, name, description, message, image }: PostProps) {
+  const color = randomRgbColor();
+
   return (
     <div className="post">
       <div className="post__header">
-        <Avatar src={image} />
+        <Avatar
+          src={image}
+          style={{
+            color: "#fff",
+            background: `rgba(${color[0]}, ${color[1]}, ${color[2]}, 0.5)`,
+          }}
+        />
         <div className="post__info">
           <h2>{name}</h2>
           <p>{description}</p>
