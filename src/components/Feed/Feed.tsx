@@ -4,6 +4,8 @@ import {
   addDoc,
   serverTimestamp,
   onSnapshot,
+  query,
+  orderBy,
 } from "firebase/firestore";
 import { IPost } from "../../types/interfaces";
 import { db } from "../../../firebase";
@@ -21,7 +23,8 @@ function Feed() {
   const [posts, setPosts] = useState<IPost[]>([]);
 
   useEffect(() => {
-    const unsubscribe = onSnapshot(collection(db, "posts"), (snapshot) => {
+    const q = query(collection(db, "posts"), orderBy("timestamp", "desc"));
+    const unsubscribe = onSnapshot(q, (snapshot) => {
       setPosts(
         snapshot.docs.map((post) => ({
           id: post.id,
