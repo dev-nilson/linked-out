@@ -14,4 +14,7 @@
 
 .app__body {
   display: flex;
+  justify-content: space-evenly;
+  width: 1200px;
+  margin: auto;
 }
