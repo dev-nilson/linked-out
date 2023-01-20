@@ -4,7 +4,6 @@ import {
   addDoc,
   serverTimestamp,
   onSnapshot,
-  query,
 } from "firebase/firestore";
 import { IPost } from "../../types/interfaces";
 import { db } from "../../../firebase";
@@ -47,6 +46,8 @@ function Feed() {
       image: "",
       timestamp: serverTimestamp(),
     });
+
+    setInput("");
   };
 
   return (
