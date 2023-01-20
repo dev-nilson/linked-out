@@ -1,36 +1,31 @@
 import { Avatar } from "@mui/material";
-import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
-import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
-import ShareIcon from '@mui/icons-material/Share';
+import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
+import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
+import ShareIcon from "@mui/icons-material/Share";
 import InputOption from "../InputOption/InputOption";
 import "./Post.css";
 
 type PostProps = {
+  id: string;
   name: string;
   description: string;
   message: string;
   image: string;
 };
 
-function Post({ name, description, message, image }: PostProps) {
+function Post({ id, name, description, message, image }: PostProps) {
   return (
     <div className="post">
       <div className="post__header">
         <Avatar src={image} />
         <div className="post__info">
-          <h2>Denilson Lemus</h2>
-          <p>Description</p>
+          <h2>{name}</h2>
+          <p>{description}</p>
         </div>
       </div>
 
       <div className="post__body">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at
-          tempus dolor. Interdum et malesuada fames ac ante ipsum primis in
-          faucibus. Mauris non nisl id velit bibendum accumsan. Etiam non
-          tincidunt ipsum, sed ullamcorper elit. Donec vestibulum eros elit, ac
-          porttitor velit ultricies quis.
-        </p>
+        <p>{message}</p>
       </div>
 
       <div className="post__buttons">
