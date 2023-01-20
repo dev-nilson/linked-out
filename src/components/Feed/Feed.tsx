@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import {
   collection,
-  getDocs,
   addDoc,
   serverTimestamp,
+  onSnapshot,
+  query,
 } from "firebase/firestore";
 import { IPost } from "../../types/interfaces";
 import { db } from "../../../firebase";
@@ -21,11 +22,20 @@ function Feed() {
   const [posts, setPosts] = useState<IPost[]>([]);
 
   useEffect(() => {
-    getPosts();
-  }, []);
+    const unsubscribe = onSnapshot(collection(db, "posts"), (snapshot) => {
+      setPosts(
+        snapshot.docs.map((post) => ({
+          id: post.id,
+          image: post.data().image,
+          name: post.data().name,
+          description: post.data().description,
+          message: post.data().message,
+        }))
+      );
+    });
 
-  const getPosts = async () => {
-  };
+    return unsubscribe;
+  }, []);
 
   const sendPost = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -61,7 +71,7 @@ function Feed() {
         </div>
       </div>
       {posts.map((post: IPost) => (
-        <Post {...post} />
+        <Post key={post.id} {...post} />
       ))}
     </div>
   );
