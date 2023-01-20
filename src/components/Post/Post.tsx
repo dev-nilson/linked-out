@@ -1,3 +1,4 @@
+import React from "react";
 import { Avatar } from "@mui/material";
 import { randomRgbColor } from "../../utils/helpers";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
@@ -46,4 +47,4 @@ function Post({ id, name, description, message, image }: PostProps) {
   );
 }
 
-export default Post;
+export default React.memo(Post);
