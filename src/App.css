@@ -5,16 +5,3 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
-.app {
-  background-color: #f3f2ef;
-  display: flex;
-  flex-direction: column;
-}
-
-.app__body {
-  display: flex;
-  justify-content: space-evenly;
-  width: 1200px;
-  margin: auto;
-}

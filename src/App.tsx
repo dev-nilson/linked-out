@@ -1,16 +1,12 @@
-import Navbar from "./components/Navbar/Navbar";
-import Sidebar from "./components/Sidebar/Sidebar";
+import { useSelector } from "react-redux";
+import { selectUser } from "./redux/user/userSlice";
+import Login from "./views/Login/Login";
+import Home from "./views/Home/Home";
 import "./App.css";
 
 function App() {
-  return (
-    <div className="app">
-      <Navbar />
-      <div className="app__body">
-        <Sidebar />
-      </div>
-    </div>
-  );
+  const user = useSelector(selectUser);
+  return <>{user ? <Login /> : <Home />}</>;
 }
 
 export default App;
