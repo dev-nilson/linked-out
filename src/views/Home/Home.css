@@ -1,0 +1,12 @@
+.home {
+  background-color: #f3f2ef;
+  display: flex;
+  flex-direction: column;
+}
+
+.home__body {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  margin: auto;
+}
