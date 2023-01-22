@@ -1,0 +1,37 @@
+.login {
+  height: 100vh;
+  background-color: #f3f2ef;
+  display: grid;
+  place-items: center;
+  gap: 0px;
+}
+
+.login > form {
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login > form > h1 {
+  font-weight: 600;
+}
+
+.login > form > input {
+  border: 1px solid #000;
+  font-size: 1rem;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.login > form > button {
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px;
+  background-color: #0A66c2;
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+}
