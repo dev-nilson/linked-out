@@ -33,5 +33,10 @@
   background-color: #0A66c2;
   color: #fff;
   border-radius: 50px;
+  transition: 0.2s;
   cursor: pointer;
+}
+
+.login > form > button:hover {
+  background-color: #033f85;
 }
