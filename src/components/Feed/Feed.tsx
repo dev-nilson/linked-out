@@ -9,6 +9,8 @@ import {
 } from "firebase/firestore";
 import { IPost } from "../../types/interfaces";
 import { db } from "../../../firebase";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../redux/user/userSlice";
 import CreateIcon from "@mui/icons-material/Create";
 import ImageIcon from "@mui/icons-material/Image";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
@@ -19,12 +21,13 @@ import Post from "../Post/Post";
 import "./Feed.css";
 
 function Feed() {
+  const user = useSelector(selectUser);
   const [input, setInput] = useState("");
   const [posts, setPosts] = useState<IPost[]>([]);
 
   useEffect(() => {
     const q = query(collection(db, "posts"), orderBy("timestamp", "desc"));
-    const unsubscribe = onSnapshot(q, (snapshot) => {
+    onSnapshot(q, (snapshot) => {
       setPosts(
         snapshot.docs.map((post) => ({
           id: post.id,
@@ -35,16 +38,14 @@ function Feed() {
         }))
       );
     });
-
-    return unsubscribe;
   }, []);
 
   const sendPost = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     addDoc(collection(db, "posts"), {
-      name: "Denilson Lemus",
-      description: "Developer",
+      name: user.name,
+      description: user.headline,
       message: input,
       image: "",
       timestamp: serverTimestamp(),
@@ -61,6 +62,7 @@ function Feed() {
           <form onSubmit={sendPost}>
             <input
               type="text"
+              placeholder="Start a post"
               value={input}
               onChange={(e) => setInput(e.target.value)}
             />

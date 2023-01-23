@@ -1,8 +1,12 @@
 import { Avatar } from "@mui/material";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../redux/user/userSlice";
 import Banner from "../../assets/banner.jpg";
 import "./Sidebar.css";
 
 export default function Sidebar() {
+  const user = useSelector(selectUser);
+
   const recentItems = (topic: string) => (
     <div className="recent">
       <span className="recent__hashtag">#</span>
@@ -15,8 +19,8 @@ export default function Sidebar() {
       <div className="sidebar__top">
         <img src={Banner} alt="profile banner" />
         <Avatar className="sidebar__avatar" />
-        <h2>Name Lastname</h2>
-        <h4>This is a description</h4>
+        <h2>{user.name}</h2>
+        <h4>{user.headline}</h4>
       </div>
 
       <div className="sidebar__stats">
