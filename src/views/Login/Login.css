@@ -18,6 +18,11 @@
   font-weight: 600;
 }
 
+.login > form > label {
+  margin: 0 0 -10px;
+  font-size: 0.8rem;
+}
+
 .login > form > input {
   border: 1px solid #000;
   font-size: 1rem;
