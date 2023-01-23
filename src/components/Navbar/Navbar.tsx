@@ -17,7 +17,7 @@ function Navbar() {
         />
         <div className="navbar__search">
           <SearchIcon />
-          <input type="text" />
+          <input type="text" placeholder="Search" />
         </div>
       </div>
       <div className="navbar__right">
