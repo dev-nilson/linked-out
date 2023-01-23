@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux";
+import { logout } from "../../redux/user/userSlice";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
 import PeopleIcon from "@mui/icons-material/People";
@@ -8,6 +10,12 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import "./Navbar.css";
 
 function Navbar() {
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(logout());
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar__left">
@@ -28,7 +36,8 @@ function Navbar() {
         <NavbarOption Icon={NotificationsIcon} title="Notifications" />
         <NavbarOption
           avatar="https://cdn-icons-png.flaticon.com/128/3177/3177440.png"
-          title="Me"
+          title="Log out"
+          onClick={handleClick}
         />
       </div>
     </nav>
