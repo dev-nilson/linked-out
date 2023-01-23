@@ -17,6 +17,7 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import SmartDisplayIcon from "@mui/icons-material/SmartDisplay";
 import DescriptionIcon from "@mui/icons-material/Description";
 import InputOption from "../InputOption/InputOption";
+import Spinner from "../Spinner/Spinner";
 import Post from "../Post/Post";
 import "./Feed.css";
 
@@ -76,9 +77,11 @@ function Feed() {
           <InputOption Icon={DescriptionIcon} title="Article" color="e16745" />
         </div>
       </div>
-      {posts.map((post: IPost) => (
-        <Post key={post.id} {...post} />
-      ))}
+      {posts.length === 0 ? (
+        <Spinner />
+      ) : (
+        posts.map((post: IPost) => <Post key={post.id} {...post} />)
+      )}
     </div>
   );
 }
