@@ -27,7 +27,9 @@ function Post({ id, name, description, message, image }: PostProps) {
             color: "#fff",
             background: `rgba(${color[0]}, ${color[1]}, ${color[2]}, 0.5)`,
           }}
-        />
+        >
+          {name.at(0)}
+        </Avatar>
         <div className="post__info">
           <h2>{name}</h2>
           <p>{description}</p>

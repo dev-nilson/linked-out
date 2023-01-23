@@ -18,7 +18,7 @@ export default function Sidebar() {
     <div className="sidebar">
       <div className="sidebar__top">
         <img src={Banner} alt="profile banner" />
-        <Avatar className="sidebar__avatar" />
+        <Avatar className="sidebar__avatar">{user.name.at(0)}</Avatar>
         <h2>{user.name}</h2>
         <h4>{user.headline}</h4>
       </div>
