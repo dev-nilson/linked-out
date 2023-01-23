@@ -4,7 +4,7 @@ function Login() {
   return (
     <div className="login">
       <form>
-        <h2>Sign in</h2>
+        <h1>Sign in</h1>
         <p>Stay updated on your professional world</p>
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Password" />
