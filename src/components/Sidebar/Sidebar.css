@@ -35,6 +35,7 @@
 .sidebar__top > h4 {
   color: gray;
   font-size: 12px;
+  font-weight: 500;
 }
 
 .sidebar__top > h2 {
@@ -99,4 +100,17 @@
 
 .recent__hashtag {
   margin: 0 5px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .sidebar {
+    flex: 0.3;
+  } 
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+    flex: 0.4;
+  } 
 }

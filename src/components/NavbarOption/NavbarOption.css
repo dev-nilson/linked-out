@@ -22,3 +22,14 @@
   font-size: 12px;
   font-weight: 400;
 }
+
+@media only screen and (max-width: 550px) {
+  .navbar-option {
+    width: 40px;
+    margin: 0 7px;
+  }
+
+  .navbar-option__title {
+    display: none;
+  }  
+}

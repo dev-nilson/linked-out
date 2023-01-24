@@ -7,11 +7,12 @@
   align-items: center;
   border-bottom: 0.1px solid lightgray;
   padding: 10px;
-  width: 100%;
+  width: 100vw;
   z-index: 100;
 }
 
-.navbar__left, .navbar__right {
+.navbar__left,
+.navbar__right {
   display: flex;
 }
 
@@ -34,4 +35,10 @@
   outline: none;
   border: none;
   background: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar__left {
+    display: none;
+  }
 }

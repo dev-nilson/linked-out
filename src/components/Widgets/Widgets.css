@@ -43,7 +43,12 @@
   font-weight: 500;
 }
 
-
 .widgets__body > div > a:hover {
   background-color: #f0f0f0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .widgets {
+    display: none;
+  } 
 }

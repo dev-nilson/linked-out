@@ -25,7 +25,6 @@
 
 .feed__input > form {
   display: flex;
-  width: 100%;
 }
 
 .feed__input > form > input {
@@ -43,4 +42,16 @@
 .feed__options {
   display: flex;
   justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 1024px) {
+  .feed {
+    flex: 0.7;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .feed {
+    flex: 1;
+  }
 }
