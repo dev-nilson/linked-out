@@ -1,3 +1,7 @@
+.spinner {
+  width: 550px
+}
+
 .lds-spinner {
   margin: 100px auto;
   position: relative;
