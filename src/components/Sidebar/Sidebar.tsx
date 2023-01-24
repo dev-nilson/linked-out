@@ -1,6 +1,7 @@
 import { Avatar } from "@mui/material";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../redux/user/userSlice";
+import { randomInteger } from "../../utils/helpers";
 import Banner from "../../assets/banner.jpg";
 import "./Sidebar.css";
 
@@ -26,11 +27,11 @@ export default function Sidebar() {
       <div className="sidebar__stats">
         <div className="stat">
           <p>Who's viewed your profile</p>
-          <p className="stat__number">79</p>
+          <p className="stat__number">{randomInteger(1000)}</p>
         </div>
         <div className="stat">
           <p>Connections</p>
-          <p className="stat__number">100</p>
+          <p className="stat__number">{randomInteger(1000)}</p>
         </div>
       </div>
 
