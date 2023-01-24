@@ -1,0 +1,49 @@
+.widgets {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: sticky;
+  top: 80px;
+  flex: 0.2;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid lightgray;
+  padding: 12px;
+  height: fit-content;
+}
+
+.widgets__header > h2 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.widgets__body {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.widgets__body > div > h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.widgets__body > div > p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.widgets__body > div > a {
+  width: fit-content;
+  border: 1px solid gray;
+  padding: 5px 15px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: gray;
+  font-weight: 500;
+}
+
+
+.widgets__body > div > a:hover {
+  background-color: #f0f0f0;
+}
