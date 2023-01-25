@@ -1,6 +1,7 @@
 import Feed from "../../components/Feed/Feed";
 import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import Widgets from "../../components/Widgets/Widgets";
 import "./Home.css";
 
 function Home() {
@@ -10,7 +11,7 @@ function Home() {
       <div className="home__body">
         <Sidebar />
         <Feed />
-        <Sidebar />
+        <Widgets />
       </div>
     </div>
   );

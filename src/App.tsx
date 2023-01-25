@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   const user = useSelector(selectUser);
-  return <>{user ? <Login /> : <Home />}</>;
+  return <>{!user ? <Login /> : <Home />}</>;
 }
 
 export default App;
