@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/user/userSlice";
+import logo from "../../assets/logo.jpg";
 import "./Login.css";
 
 function Login() {
@@ -24,6 +25,7 @@ function Login() {
   return (
     <div className="login">
       <form onSubmit={register}>
+        <img src={logo} />
         <p>
           Stay updated on your <del>un</del>professional world
         </p>
