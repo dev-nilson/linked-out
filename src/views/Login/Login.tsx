@@ -24,9 +24,8 @@ function Login() {
   return (
     <div className="login">
       <form onSubmit={register}>
-        <h1>Log in</h1>
         <p>
-          Stay updated on your professional world
+          Stay updated on your <del>un</del>professional world
         </p>
         <label>Name (optional)</label>
         <input
