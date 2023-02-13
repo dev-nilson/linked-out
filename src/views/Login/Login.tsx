@@ -11,7 +11,7 @@ function Login() {
   const register = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!headline) return alert("All fields are required");
+    if (!headline.trim()) return alert("All fields are required");
 
     dispatch(
       login({
