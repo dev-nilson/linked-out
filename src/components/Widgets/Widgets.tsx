@@ -12,7 +12,9 @@ export default function Widgets() {
         <div>
           <h3>Denilson Lemus</h3>
           <p>Software Developer</p>
-          <a href="https://www.linkedin.com/in/denilson-lemus">+ Follow</a>
+          <a href="https://www.linkedin.com/in/denilson-lemus" target="_blank">
+            + Follow
+          </a>
         </div>
       </div>
     </div>
