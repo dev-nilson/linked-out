@@ -44,15 +44,19 @@ function Feed() {
   const sendPost = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    addDoc(collection(db, "posts"), {
-      name: user.name,
-      description: user.headline,
-      message: input,
-      image: "",
-      timestamp: serverTimestamp(),
-    });
+    if (!input.trim()) {
+      alert("You need to input a valid post");
+    } else {
+      addDoc(collection(db, "posts"), {
+        name: user.name,
+        description: user.headline,
+        message: input,
+        image: "",
+        timestamp: serverTimestamp(),
+      });
 
-    setInput("");
+      setInput("");
+    }
   };
 
   return (
