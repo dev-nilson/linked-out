@@ -2,6 +2,7 @@ import React from "react";
 import { Avatar } from "@mui/material";
 import { randomRgbColor } from "../../utils/helpers";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import ShareIcon from "@mui/icons-material/Share";
 import InputOption from "../InputOption/InputOption";
@@ -41,7 +42,12 @@ function Post({ id, name, description, message, image }: PostProps) {
       </div>
 
       <div className="post__buttons">
-        <InputOption Icon={ThumbUpOffAltIcon} title="Like" color="333" />
+        <InputOption
+          Icon={ThumbUpOffAltIcon}
+          ActiveIcon={ThumbUpIcon}
+          title="Like"
+          color="333"
+        />
         <InputOption Icon={ChatBubbleOutlineIcon} title="Comment" color="333" />
         <InputOption Icon={ShareIcon} title="Share" color="333" />
       </div>
