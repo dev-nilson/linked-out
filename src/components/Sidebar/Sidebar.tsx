@@ -37,10 +37,12 @@ export default function Sidebar() {
 
       <div className="sidebar__bottom">
         <p>Recent</p>
-        {recentItems("job")}
-        {recentItems("opportunity")}
-        {recentItems("hiring")}
-        {recentItems("recruiting")}
+        {recentItems("made")}
+        {recentItems("with")}
+        {recentItems("💙")}
+        {recentItems("by")}
+        {recentItems("Denilson")}
+        {recentItems("Lemus")}
       </div>
     </div>
   );
