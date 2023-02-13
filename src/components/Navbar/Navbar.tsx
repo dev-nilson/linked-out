@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { logout } from "../../redux/user/userSlice";
+import logo from "../../assets/logo.jpg";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
 import PeopleIcon from "@mui/icons-material/People";
@@ -20,7 +21,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar__left">
         <img
-          src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png"
+          src={logo}
           alt="linked out logo"
         />
         <div className="navbar__search">
