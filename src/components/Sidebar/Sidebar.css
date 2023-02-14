@@ -2,6 +2,7 @@
   position: sticky;
   top: 80px;
   flex: 0.2;
+  margin-top: 10px;
   border-radius: 10px;
   text-align: left;
   height: fit-content;
@@ -64,6 +65,7 @@
 }
 
 .stat__number {
+  padding-left: 10px;
   font-weight: 800 !important;
   color: #0a66c2 !important;
 }
