@@ -4,7 +4,7 @@ import "./InputOption.css";
 
 type InputOptionProps = {
   Icon: SvgIconComponent;
-  ActiveIcon?: SvgIconComponent;
+  ActiveIcon?: any;
   title: string;
   color: string;
 };
