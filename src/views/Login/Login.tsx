@@ -43,7 +43,7 @@ function Login() {
           value={headline}
           onChange={(e) => setHeadline(e.target.value)}
         />
-        <button>Sign in</button>
+        <button>Submit</button>
       </form>
     </div>
   );
